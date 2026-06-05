@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyglot Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/data/svg/favicon.svg">
+    
+    <style>
+        .lang-switcher {
+            background: #223427;
+            color: #fff;
+            border: 1px solid var(--color-accent-orange);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: inherit;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .lang-switcher option { background: var(--color-dark-green); }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <a href="#home" class="nav-link" data-target="home">Polyglot <span>online</span></a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link active" data-i18n="nav_home" data-target="home"></a></li>
+                <li><a href="#languages" class="nav-link" data-i18n="nav_languages" data-target="languages"></a></li>
+                <!-- Новый пункт меню -->
+                <li><a href="#about" class="nav-link" data-i18n="nav_about_me" data-target="about"></a></li>
+                
+                <li id="menu-auth"><a href="#login" class="nav-link" data-i18n="nav_login" data-target="login"></a></li>
+                <li id="menu-user" style="display: none;">
+                    <span id="user-display" style="margin-right: 15px; font-weight: 500; color: #fff;"></span>
+                    <a href="#logout" id="logout-btn" class="nav-link" data-i18n="nav_logout" style="color: var(--color-accent-orange);"></a>
+                </li>
+                <li>
+                    <select id="language-select" class="lang-switcher">
+                        <option value="it">🇮🇹 IT</option>
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="ru">🇷🇺 RU</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main id="app-content">
+<section id="page-about" class="page-view profile-section">
+        <div class="container profile-container">
+            
+            <div class="profile-main-card">
+                <div class="profile-photo-wrapper">
+                    <img src="assets/img/vladimir_rukavishnikov.jpg" alt="Vladimir Rukavishnikov" class="profile-avatar">
+                </div>
+                <div class="profile-base-info">
+                    <h2 data-i18n="profile_name">Vladimir Rukavishnikov</h2>
+                    <p class="profile-matricola">
+                        <span data-i18n="profile_matricola">Matricola:</span> <strong>20063686</strong>
+                    </p>
+                    <p class="profile-status" data-i18n="profile_status">Студент курса Информатики Университета УПО (UPO) в городе Верчелли.</p>
+                    
+                    <div class="profile-socials">
+                        <a href="https://www.instagram.com/hungryvovka/" target="_blank" class="social-icon">📸 Instagram</a>
+                        <a href="https://t.me/https://t.me/VladimirRukavishnikovIT" target="_blank" class="social-icon">✈️ Telegram</a>
+                        <a href="https://www.linkedin.com/in/vladimirrukavishnikov/" target="_blank" class="social-icon">💼 LinkedIn</a>
+                        <a href="vladimirrukavishnikovmail@gmail.com" class="social-icon">✉️ Email</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <div class="details-block">
+                    <h3 class="block-title" data-i18n="title_edu">📚 Образование и курсы</h3>
+                    <ul class="education-list">
+                        <li>
+                            <span class="edu-years" data-i18n="edu_upo_years">2024 - Present</span>
+                            <div class="edu-desc" data-i18n="edu_upo_desc"><strong>University of Eastern Piedmont (UPO)</strong><br>Bachelor's degree, Informatics</div>
+                        </li>
+                        <li>
+                            <span class="edu-years" data-i18n="edu_rs_years">2022</span>
+                            <div class="edu-desc" data-i18n="edu_rs_desc"><strong>The Rolling Scopes School (RS School)</strong><br>JS/FE pre-school 2022Q2 (JavaScript)</div>
+                        </li>
+                        <li>
+                            <span class="edu-years" data-i18n="edu_istu_m_years">2019</span>
+                            <div class="edu-desc" data-i18n="edu_istu_m_desc"><strong>Kalashnikov Izhevsk State Technical University (ISTU)</strong><br>Master's with honor degree, Finance and credit</div>
+                        </li>
+                        <li>
+                            <span class="edu-years" data-i18n="edu_pnrpu_years">2017</span>
+                            <div class="edu-desc" data-i18n="edu_pnrpu_desc"><strong>Perm National Research Polytechnic University (PNRPU)</strong><br>1C: Accounting</div>
+                        </li>
+                        <li>
+                            <span class="edu-years" data-i18n="edu_istu_b_years">2016</span>
+                            <div class="edu-desc" data-i18n="edu_istu_b_desc"><strong>Kalashnikov Izhevsk State Technical University (ISTU)</strong><br>Bachelor's degree, Economics</div>
+                        </li>
+                        <li>
+                            <span class="edu-years" data-i18n="edu_noc_years">10-11 класс</span>
+                            <div class="edu-desc" data-i18n="edu_noc_desc">Школа НОЦ (г. Чайковский)</div>
+                        </li>
+                        <li>
+                            <span class="edu-years" data-i18n="edu_school1_years">1-9 класс</span>
+                            <div class="edu-desc" data-i18n="edu_school1_desc">Школа №1</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="details-block">
+                    <h3 class="block-title" data-i18n="title_interests">🧩 Интересы и Хобби</h3>
+                    <div class="interests-tags">
+                        <span class="tag" data-i18n="hobby_prog">💻 Программирование</span>
+                        <span class="tag" data-i18n="hobby_books">📚 Чтение книг</span>
+                        <span class="tag" data-i18n="hobby_lang">🗣️ Изучение языков</span>
+                        <span class="tag" data-i18n="hobby_chess">♟️ Шахматы</span>
+                        <span class="tag" data-i18n="hobby_repair">🛠️ Ремонт компьютеров</span>
+                        <span class="tag" data-i18n="hobby_bees">🐝 Пчеловодство</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+        <section id="page-home" class="page-view active">
+            <div class="hero-section">
+                <div class="container hero-container">
+                    <h1 class="hero-title" data-i18n="hero_title"></h1>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle"></p>
+                    <a href="#languages" class="btn-primary nav-link" data-i18n="btn_choose" data-target="languages"></a>
+                </div>
+            </div>
+            <div class="about-section">
+                <div class="container about-container">
+                    <div class="about-image">
+                        <img src="assets/img/world.jpg" alt="World Map" class="about-img-fluid">
+                    </div>
+                    <div class="about-content">
+                        <h2 class="section-title" data-i18n="about_title"></h2>
+                        <p class="section-text" data-i18n="about_text1"></p>
+                        <h3 class="subsection-title" data-i18n="about_subtitle"></h3>
+                        <p class="section-text" data-i18n="about_text2"></p>
+                    </div>
+                </div>
+            </div>
+<div class="home-features-wrapper">
+    <div class="container">
+        <h2 class="features-main-title" data-i18n="home_features_title">Наши Преимущества</h2>
+        
+        <div class="features-timeline">
+            
+            <div class="feature-card fly-right">
+                <div class="country-thumb-container">
+                    <img src="assets/img/china.jpg" alt="China" class="country-thumb">
+                </div>
+                <div class="feature-text-block">
+                    <h3 data-i18n="feat_1_title"></h3>
+                    <p data-i18n="feat_1_text"></p>
+                </div>
+            </div>
+
+            <div class="feature-card fly-left">
+                <div class="country-thumb-container">
+                    <img src="assets/img/spain.jpg" alt="Spain" class="country-thumb">
+                </div>
+                <div class="feature-text-block">
+                    <h3 data-i18n="feat_2_title"></h3>
+                    <p data-i18n="feat_2_text"></p>
+                </div>
+            </div>
+
+            <div class="feature-card fly-right">
+                <div class="country-thumb-container">
+                    <img src="assets/img/england.jpg" alt="England" class="country-thumb">
+                </div>
+                <div class="feature-text-block">
+                    <h3 data-i18n="feat_3_title"></h3>
+                    <p data-i18n="feat_3_text"></p>
+                </div>
+            </div>
+
+            <div class="feature-card fly-left">
+                <div class="country-thumb-container">
+                    <img src="assets/img/italy.jpg" alt="Italy" class="country-thumb">
+                </div>
+                <div class="feature-text-block">
+                    <h3 data-i18n="feat_4_title"></h3>
+                    <p data-i18n="feat_4_text"></p>
+                </div>
+            </div>
+
+            <div class="feature-card fly-right">
+                <div class="country-thumb-container">
+                    <img src="assets/img/russia.jpg" alt="Russia" class="country-thumb">
+                </div>
+                <div class="feature-text-block">
+                    <h3 data-i18n="feat_5_title"></h3>
+                    <p data-i18n="feat_5_text"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+        </section>
+
+        <section id="page-languages" class="page-view">
+            <div class="languages-section">
+                <div class="container">
+                    <h2 class="section-title text-center" data-i18n="lang_title"></h2>
+                    <div class="cards-grid">
+<div class="language-card nav-link" data-target="lang-zh">
+    <div class="card-img-wrapper">
+        <div class="img-placeholder text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/china.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 8px 8px 0 0;">
+            🇨🇳
+        </div>
+    </div>
+    <div class="card-info"><div><h3 class="card-title" data-i18n="card_zh"></h3><p class="card-desc">🥢</p></div></div>
+</div>
+                
+<div class="language-card nav-link" data-target="lang-es">
+    <div class="card-img-wrapper">
+        <div class="img-placeholder text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/spain.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 8px 8px 0 0;">
+            🇪🇸
+        </div>
+    </div>
+    <div class="card-info"><div><h3 class="card-title" data-i18n="card_es"></h3><p class="card-desc">💃</p></div></div>
+</div>
+                
+<div class="language-card nav-link" data-target="lang-en">
+    <div class="card-img-wrapper">
+        <div class="img-placeholder text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/england.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 8px 8px 0 0;">
+            🇬🇧
+        </div>
+    </div>
+    <div class="card-info"><div><h3 class="card-title" data-i18n="card_en"></h3><p class="card-desc">👑</p></div></div>
+</div>
+                
+<div class="language-card nav-link" data-target="lang-it">
+    <div class="card-img-wrapper">
+        <div class="img-placeholder text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/italy.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 8px 8px 0 0;">
+            🇮🇹
+        </div>
+    </div>
+    <div class="card-info"><div><h3 class="card-title" data-i18n="card_it"></h3><p class="card-desc">🍕</p></div></div>
+</div>
+                
+<div class="language-card nav-link" data-target="lang-ru">
+    <div class="card-img-wrapper">
+        <div class="img-placeholder text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/russia.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 8px 8px 0 0;">
+            🇷🇺
+        </div>
+    </div>
+    <div class="card-info"><div><h3 class="card-title" data-i18n="card_ru"></h3><p class="card-desc">🪆</p></div></div>
+</div>
+                
+<div class="language-card nav-link" data-target="lang-ar">
+    <div class="card-img-wrapper">
+        <div class="img-placeholder text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/arabic.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 8px 8px 0 0;">
+            🇦🇪
+        </div>
+    </div>
+    <div class="card-info"><div><h3 class="card-title" data-i18n="card_ar"></h3><p class="card-desc">🕌</p></div></div>
+</div>
+                
+<div class="language-card nav-link" data-target="lang-uk">
+    <div class="card-img-wrapper">
+        <div class="img-placeholder text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/ukraine.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 8px 8px 0 0;">
+            🇺🇦
+        </div>
+    </div>
+    <div class="card-info"><div><h3 class="card-title" data-i18n="card_uk"></h3><p class="card-desc">🌾</p></div></div>
+</div>
+                
+<div class="language-card nav-link" data-target="lang-pt">
+    <div class="card-img-wrapper">
+        <div class="img-placeholder text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/portugal.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 8px 8px 0 0;">
+            🇵🇹
+        </div>
+    </div>
+    <div class="card-info"><div><h3 class="card-title" data-i18n="card_pt"></h3><p class="card-desc">🌊</p></div></div>
+</div>
+                
+<div class="language-card nav-link" data-target="lang-de">
+    <div class="card-img-wrapper">
+        <div class="img-placeholder text-white" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/img/germany.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 8px 8px 0 0;">
+            🇩🇪
+        </div>
+    </div>
+    <div class="card-info"><div><h3 class="card-title" data-i18n="card_de"></h3><p class="card-desc">🏰</p></div></div>
+</div>
+                
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="page-lang-zh" class="page-view lang-page">
+    <div class="container">
+        <a href="#languages" class="btn-primary nav-link" data-i18n="back_btn" data-target="languages" style="margin-bottom: 30px;"></a>
+        
+        <h1 id="zh-title" class="section-title" data-i18n="zh_title" style="font-size: 42px;"></h1>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/zh-main.jpg" alt="China Main" class="lang-inner-img">
+</div>
+
+        <div class="lang-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div class="info-block">
+                <p id="zh-speakers" class="section-text" data-i18n="zh_speakers"></p>
+            </div>
+            <div class="info-block">
+                <p id="zh-geography" class="section-text" data-i18n="zh_geography"></p>
+            </div>
+        </div>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/zh-writing.jpg" alt="China Writing" class="lang-inner-img">
+</div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="zh-history" class="section-text" data-i18n="zh_history"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="zh-alphabet" class="section-text" data-i18n="zh_alphabet"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 40px;">
+            <p id="zh-prospects" class="section-text" data-i18n="zh_prospects"></p>
+        </div>
+    </div>
+</section>
+
+<section id="page-lang-es" class="page-view lang-page">
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="#languages" class="btn-primary nav-link" data-i18n="back_btn" data-target="languages" style="margin-bottom: 30px;"></a>
+        
+        <!-- Динамический заголовок -->
+        <h1 id="es-title" class="section-title" data-i18n="es_title" style="font-size: 42px;"></h1>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/es-main.jpg" alt="Spain Main" class="lang-inner-img">
+</div>
+
+        <!-- Текстовые блоки с информацией -->
+        <div class="lang-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div class="info-block">
+                <p id="es-speakers" class="section-text" data-i18n="es_speakers"></p>
+            </div>
+            <div class="info-block">
+                <p id="es-geography" class="section-text" data-i18n="es_geography"></p>
+            </div>
+        </div>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/es-culture.jpg" alt="Spain Culture" class="lang-inner-img">
+</div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="es-history" class="section-text" data-i18n="es_history"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="es-alphabet" class="section-text" data-i18n="es_alphabet"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 40px;">
+            <p id="es-prospects" class="section-text" data-i18n="es_prospects"></p>
+        </div>
+    </div>
+</section>
+
+<section id="page-lang-en" class="page-view lang-page">
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="#languages" class="btn-primary nav-link" data-i18n="back_btn" data-target="languages" style="margin-bottom: 30px;"></a>
+        
+        <!-- Заголовок -->
+        <h1 id="en-title" class="section-title" data-i18n="en_title" style="font-size: 42px;"></h1>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/en-main.jpg" alt="UK Main" class="lang-inner-img">
+</div>
+
+        <!-- Сетка с информацией -->
+        <div class="lang-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div class="info-block">
+                <p id="en-speakers" class="section-text" data-i18n="en_speakers"></p>
+            </div>
+            <div class="info-block">
+                <p id="en-geography" class="section-text" data-i18n="en_geography"></p>
+            </div>
+        </div>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/en-culture.jpg" alt="UK Culture" class="lang-inner-img">
+</div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="en-history" class="section-text" data-i18n="en_history"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="en-alphabet" class="section-text" data-i18n="en_alphabet"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 40px;">
+            <p id="en-prospects" class="section-text" data-i18n="en_prospects"></p>
+        </div>
+    </div>
+</section>
+<section id="page-lang-it" class="page-view lang-page">
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="#languages" class="btn-primary nav-link" data-i18n="back_btn" data-target="languages" style="margin-bottom: 30px;"></a>
+        
+        <!-- Заголовок -->
+        <h1 id="it-title" class="section-title" data-i18n="it_title" style="font-size: 42px;"></h1>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/it-main.jpg" alt="Italy Main" class="lang-inner-img">
+</div>
+
+        <!-- Сетка с информацией -->
+        <div class="lang-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div class="info-block">
+                <p id="it-speakers" class="section-text" data-i18n="it_speakers"></p>
+            </div>
+            <div class="info-block">
+                <p id="it-geography" class="section-text" data-i18n="it_geography"></p>
+            </div>
+        </div>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/it-culture.jpg" alt="Italy Culture" class="lang-inner-img">
+</div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="it-history" class="section-text" data-i18n="it_history"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="it-alphabet" class="section-text" data-i18n="it_alphabet"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 40px;">
+            <p id="it-prospects" class="section-text" data-i18n="it_prospects"></p>
+        </div>
+    </div>
+</section>
+
+<section id="page-lang-ru" class="page-view lang-page">
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="#languages" class="btn-primary nav-link" data-i18n="back_btn" data-target="languages" style="margin-bottom: 30px;"></a>
+        
+        <!-- Заголовок -->
+        <h1 id="ru-title" class="section-title" data-i18n="ru_title" style="font-size: 42px;"></h1>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/ru-main.jpg" alt="Russia Main" class="lang-inner-img">
+</div>
+
+        <!-- Сетка с информацией -->
+        <div class="lang-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div class="info-block">
+                <p id="ru-speakers" class="section-text" data-i18n="ru_speakers"></p>
+            </div>
+            <div class="info-block">
+                <p id="ru-geography" class="section-text" data-i18n="ru_geography"></p>
+            </div>
+        </div>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/ru-culture.jpg" alt="Russia Culture" class="lang-inner-img">
+</div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="ru-history" class="section-text" data-i18n="ru_history"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="ru-alphabet" class="section-text" data-i18n="ru_alphabet"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 40px;">
+            <p id="ru-prospects" class="section-text" data-i18n="ru_prospects"></p>
+        </div>
+    </div>
+</section>
+
+<section id="page-lang-ar" class="page-view lang-page">
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="#languages" class="btn-primary nav-link" data-i18n="back_btn" data-target="languages" style="margin-bottom: 30px;"></a>
+        
+        <!-- Заголовок -->
+        <h1 id="ar-title" class="section-title" data-i18n="ar_title" style="font-size: 42px;"></h1>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/ar-main.jpg" alt="Arabic Main" class="lang-inner-img">
+</div>
+
+        <!-- Сетка с информацией -->
+        <div class="lang-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div class="info-block">
+                <p id="ar-speakers" class="section-text" data-i18n="ar_speakers"></p>
+            </div>
+            <div class="info-block">
+                <p id="ar-geography" class="section-text" data-i18n="ar_geography"></p>
+            </div>
+        </div>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/ar-culture.jpg" alt="Arabic Culture" class="lang-inner-img">
+</div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="ar-history" class="section-text" data-i18n="ar_history"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="ar-alphabet" class="section-text" data-i18n="ar_alphabet"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 40px;">
+            <p id="ar-prospects" class="section-text" data-i18n="ar_prospects"></p>
+        </div>
+    </div>
+</section>
+
+<section id="page-lang-uk" class="page-view lang-page">
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="#languages" class="btn-primary nav-link" data-i18n="back_btn" data-target="languages" style="margin-bottom: 30px;"></a>
+        
+        <!-- Заголовок -->
+        <h1 id="uk-title" class="section-title" data-i18n="uk_title" style="font-size: 42px;"></h1>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/uk-main.jpg" alt="Ukraine Main" class="lang-inner-img">
+</div>
+
+        <!-- Сетка с информацией -->
+        <div class="lang-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div class="info-block">
+                <p id="uk-speakers" class="section-text" data-i18n="uk_speakers"></p>
+            </div>
+            <div class="info-block">
+                <p id="uk-geography" class="section-text" data-i18n="uk_geography"></p>
+            </div>
+        </div>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/uk-culture.jpg" alt="Ukraine Culture" class="lang-inner-img">
+</div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="uk-history" class="section-text" data-i18n="uk_history"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="uk-alphabet" class="section-text" data-i18n="uk_alphabet"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 40px;">
+            <p id="uk-prospects" class="section-text" data-i18n="uk_prospects"></p>
+        </div>
+    </div>
+</section>
+
+<section id="page-lang-pt" class="page-view lang-page">
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="#languages" class="btn-primary nav-link" data-i18n="back_btn" data-target="languages" style="margin-bottom: 30px;"></a>
+        
+        <!-- Заголовок -->
+        <h1 id="pt-title" class="section-title" data-i18n="pt_title" style="font-size: 42px;"></h1>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/pt-main.jpg" alt="Portugal Main" class="lang-inner-img">
+</div>
+
+        <!-- Сетка с информацией -->
+        <div class="lang-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div class="info-block">
+                <p id="pt-speakers" class="section-text" data-i18n="pt_speakers"></p>
+            </div>
+            <div class="info-block">
+                <p id="pt-geography" class="section-text" data-i18n="pt_geography"></p>
+            </div>
+        </div>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/pt-culture.jpg" alt="Portugal Culture" class="lang-inner-img">
+</div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="pt-history" class="section-text" data-i18n="pt_history"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="pt-alphabet" class="section-text" data-i18n="pt_alphabet"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 40px;">
+            <p id="pt-prospects" class="section-text" data-i18n="pt_prospects"></p>
+        </div>
+    </div>
+</section>
+
+<section id="page-lang-de" class="page-view lang-page">
+    <div class="container">
+        <!-- Кнопка назад -->
+        <a href="#languages" class="btn-primary nav-link" data-i18n="back_btn" data-target="languages" style="margin-bottom: 30px;"></a>
+        
+        <!-- Заголовок -->
+        <h1 id="de-title" class="section-title" data-i18n="de_title" style="font-size: 42px;"></h1>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/de-main.jpg" alt="Germany Main" class="lang-inner-img">
+</div>
+
+        <!-- Сетка с информацией -->
+        <div class="lang-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div class="info-block">
+                <p id="de-speakers" class="section-text" data-i18n="de_speakers"></p>
+            </div>
+            <div class="info-block">
+                <p id="de-geography" class="section-text" data-i18n="de_geography"></p>
+            </div>
+        </div>
+
+<div class="lang-photo-container" style="margin-bottom: 40px;">
+    <img src="assets/img/de-culture.jpg" alt="Germany Culture" class="lang-inner-img">
+</div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="de-history" class="section-text" data-i18n="de_history"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 25px;">
+            <p id="de-alphabet" class="section-text" data-i18n="de_alphabet"></p>
+        </div>
+
+        <div class="info-block" style="margin-bottom: 40px;">
+            <p id="de-prospects" class="section-text" data-i18n="de_prospects"></p>
+        </div>
+    </div>
+</section>
+
+        <section id="page-login" class="page-view">
+            <div class="auth-section">
+                <div class="container">
+                    <div class="auth-box">
+                        <h2 data-i18n="auth_title"></h2>
+                        <form id="auth-form">
+                            <div class="form-group">
+                                <label for="username" data-i18n="auth_login_label"></label>
+                                <input type="text" id="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" data-i18n="auth_pass_label"></label>
+                                <input type="password" id="password" required>
+                            </div>
+                            <button type="submit" class="btn-primary btn-submit" data-i18n="auth_btn"></button>
+                        </form>
+                        <p id="auth-message" class="auth-msg"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<footer class="footer">
+        <div class="container footer-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            
+            <div class="footer-university" style="display: flex; align-items: center;">
+                <img src="assets/img/png/UPO.png" alt="University Logo" style="height: 80px; width: auto;">
+            </div>
+
+            <div class="footer-info" style="text-align: center;">
+                <p class="footer-copy" style="margin: 0 0 5px 0;">© Polyglot Project 2026</p>
+                <p style="margin: 0; font-size: 14px; color: #a4b3a7;">
+                    <span data-i18n="profile_name">Vladimir Rukavishnikov</span> | 
+                    <span data-i18n="profile_matricola">Matricola:</span> 20063686
+                </p>
+            </div>
+
+            <div class="footer-github">
+                <a href="https://github.com/hungryvovka" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                    <img src="assets/img/png/github.png" alt="GitHub" style="height: 60px; width: 60px;">
+                </a>
+            </div>
+
+        </div>
+</footer>
+
+    <script src="js/lang.js"></script>
+    
+    <script src="assets/data/zh.js"></script>
+    <script src="assets/data/es.js"></script>
+    <script src="assets/data/en.js"></script>
+    <script src="assets/data/it.js"></script>
+    <script src="assets/data/ru.js"></script>
+    <script src="assets/data/ar.js"></script>
+    <script src="assets/data/uk.js"></script>
+    <script src="assets/data/pt.js"></script>
+    <script src="assets/data/de.js"></script>
+
+    <script src="assets/data/vladimir.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
