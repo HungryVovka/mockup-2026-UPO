@@ -1,0 +1,717 @@
+/* Цветовая палитра */
+:root {
+    --color-dark-green: #111e15;
+    --color-accent-orange: #fe9013;
+    --color-accent-orange-hover: #e47f0a;
+    --color-bg-light: #fdfdfd;
+    --color-text-dark: #333333;
+    --font-main: 'Roboto', sans-serif;
+}
+
+/* Сброс базовых стилей браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка сайта */
+.header {
+    background-color: var(--color-dark-green);
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--color-accent-orange);
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-accent-orange);
+}
+
+#menu-user {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+/* Контейнер для динамического контента с анимацией переходов */
+#app-content {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    transform-origin: center top;
+}
+
+/* Управление видимостью страниц-экранов */
+.page-view {
+    display: none;
+}
+
+.page-view.active {
+    display: block;
+}
+
+/* Главный баннер (Hero) */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/img/foreign_language.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 100px 0;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-title span {
+    color: var(--color-accent-orange);
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+/* Универсальные Кнопки */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--color-accent-orange);
+    color: #ffffff;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-orange-hover);
+}
+
+/* Секция "О нас" */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-img-fluid {
+    width: 100%;
+    height: auto;
+    max-height: 400px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    display: block;
+}
+
+.about-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image, .about-content {
+    flex: 1;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.text-white { color: #fff; }
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.text-center { text-align: center; }
+
+.subsection-title {
+    font-size: 24px;
+    margin: 25px 0 10px;
+    color: var(--color-dark-green);
+}
+
+.section-text {
+    color: #4f4f4f;
+    margin-bottom: 15px;
+}
+
+/* Секция Карточек (Языки) */
+.languages-section {
+    padding: 80px 0;
+    background-color: #f4f6f4;
+}
+
+.languages-section .section-title {
+    margin-bottom: 50px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.language-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-img-wrapper {
+    height: 200px;
+}
+
+.card-info {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: #7c7c7c;
+}
+
+.card-icon {
+    font-size: 24px;
+}
+
+/* Блок Авторизации */
+.auth-section {
+    padding: 100px 0;
+    background-color: #f4f6f4;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+}
+
+.auth-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.auth-box h2 {
+    margin-bottom: 20px;
+    color: var(--color-dark-green);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.btn-submit {
+    width: 100%;
+    text-align: center;
+}
+
+.auth-msg {
+    margin-top: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Подвал сайта */
+.footer {
+    background-color: var(--color-dark-green);
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copy {
+    font-size: 14px;
+    color: #a2a2a2;
+}
+
+/* Стили для персональных страниц языков */
+.lang-page {
+    padding: 100px 0;
+    min-height: calc(100vh - 160px);
+    background-color: var(--color-bg-light);
+}
+
+.lang-page .section-title {
+    color: var(--color-dark-green);
+    margin-bottom: 30px;
+}
+
+.lang-page .section-text {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 40px;
+    color: #4f4f4f;
+}
+
+/* Делаем всю карточку кликабельной */
+.language-card {
+    cursor: pointer;
+}
+
+/* адаптивные стили для фото на странице языков  */
+.lang-inner-img {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover; 
+    object-position: center; 
+    border-radius: 8px; 
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+}
+
+/* Адаптивность для мобильных экранов (планшеты и телефоны) */
+@media (max-width: 768px) {
+    .lang-inner-img {
+        height: 220px; 
+    }
+}
+
+/* --- СТИЛИ ДЛЯ ПЕРСОНАЛЬНОГО ПРОФИЛЯ СТУДЕНТА --- */
+.profile-section {
+    padding: 50px 0;
+    background-color: var(--color-bg-light);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.profile-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Левая колонка (Карточка) */
+.profile-main-card {
+    flex: 1;
+    background: #f7f9f7; /* Мягкий светлый эко-тон */
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+.profile-photo-wrapper {
+    width: 100%;             
+    max-width: 240px;        
+    aspect-ratio: 3 / 4;     
+    margin: 0 auto 20px;
+    border-radius: 8px;      
+    overflow: hidden;        
+    border: 3px solid var(--color-accent-orange);
+    background-color: #cbd5e1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       
+    object-position: top center; 
+}
+
+.profile-main-card h2 {
+    color: var(--color-dark-green);
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.profile-matricola {
+    color: #475569;
+    font-size: 14px;
+    background: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.profile-status {
+    font-size: 14px;
+    color: var(--color-text-dark);
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* Кнопки соцсетей */
+.profile-socials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.social-icon {
+    display: block;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    border: 1px solid #cbd5e1;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.social-icon:hover {
+    border-color: var(--color-accent-orange);
+    color: var(--color-accent-orange);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(254, 144, 19, 0.15);
+}
+
+/* Правая колонка */
+.profile-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.block-title {
+    font-size: 20px;
+    color: var(--color-dark-green);
+    margin-bottom: 18px;
+    border-bottom: 2px solid var(--color-accent-orange);
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+/* Хронология учебы */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.education-list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.edu-years {
+    min-width: 130px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--color-accent-orange);
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.edu-desc {
+    font-size: 14px;
+    color: var(--color-text-dark);
+    line-height: 1.4;
+}
+
+/* Облако тегов (Хобби) */
+.interests-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.interests-tags .tag {
+    background: #ffffff;
+    color: var(--color-dark-green);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+/* Адаптивная верстка под планшеты и мобильные устройства */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .profile-main-card, 
+    .profile-details {
+        width: 100%;
+        flex: none;
+    }
+
+    .education-list li {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .edu-years {
+        min-width: unset;
+        display: inline-block;
+    }
+}
+
+#page-about {
+    min-height: calc(100vh - 160px);
+    display: none; /* Контролируется через класс .active в main.js */
+}
+
+#page-about.active {
+    display: block;
+}
+
+/* Стили для секции преимуществ */
+.home-features-wrapper {
+    padding: 80px 0 100px;
+    background-color: var(--color-bg-light);
+    overflow: hidden;
+}
+
+.features-main-title {
+    text-align: center;
+    font-size: 32px;
+    color: var(--color-dark-green);
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.features-main-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-accent-orange);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.features-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Исходное состояние карточек: сдвинуты вниз, прозрачность почти нулевая */
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #ffffff;
+    padding: 30px 35px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    
+    /* Плавный переход для всех свойств туда и обратно */
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                opacity 0.8s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease;
+    
+    opacity: 0.01;
+}
+
+/* Настройки сдвигов для вылета слева/справа + исходный сдвиг СНИЗУ */
+.feature-card.fly-right {
+    transform: translateX(120px) translateY(60px);
+}
+.feature-card.fly-left {
+    transform: translateX(-120px) translateY(60px);
+}
+
+/* Состояние при доскролливании: встает на свое место, становится темным/контрастным */
+.feature-card.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0) !important;
+}
+
+/* Эффект легкого приподнимания при наведении (только если карточка уже видима) */
+.feature-card.visible:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 25px rgba(254, 144, 19, 0.12);
+    border-color: var(--color-accent-orange);
+}
+
+/* Увеличенный контейнер для картинок */
+/* 1. Контейнер для картинки жестко держит свои границы */
+.country-thumb-container {
+    width: 180px;
+    height: 130px;
+    min-width: 180px;
+    border-radius: 12px;
+    overflow: hidden; /* <--- Это не даст картинке вылезти за рамки */
+    border: 2px solid var(--color-accent-orange);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* 2. Базовое состояние самой картинки */
+.country-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease; /* Плавный зум внутри рамки */
+}
+
+/* 3. Зум картинки при наведении на ВСЮ карточку */
+.feature-card.visible:hover .country-thumb {
+    transform: scale(1.1); /* Картинка увеличивается, но обрезается рамками контейнера */
+}
+
+/* Настройки текстового контейнера для объемного контента */
+.feature-text-block {
+    flex-grow: 1;
+    padding-left: 15px;
+}
+
+.feature-text-block h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--color-dark-green);
+}
+
+.feature-text-block p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Корректировка самой карточки для комфортного размещения контента */
+.feature-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    width: 100%;
+    max-width: 900px; /* Увеличиваем ширину карточки под длинный текст */
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+    .feature-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 20px;
+    }
+    .country-thumb-container {
+        margin: 0 auto;
+        width: 160px;
+        height: 110px;
+    }
+}
