@@ -22,10 +22,10 @@ corso. Una volta fissato il tema, i requisiti non cambieranno e
 saranno validi fino alla sessione di Febbraio 2027 (inclusa).
 
 # Requisiti logistici
-• Il progetto deve essere realizzato individualmente, senza eccessiva “collaborazione” tra gli studenti;
-• Non è prevista né accettabile una consegna (parzialmente o
++ Il progetto deve essere realizzato individualmente, senza eccessiva “collaborazione” tra gli studenti;
++ Non è prevista né accettabile una consegna (parzialmente o
 totalmente) in comune con un altro studente del corso;
-• Il progetto deve essere consegnato secondo le tempistiche
++ Il progetto deve essere consegnato secondo le tempistiche
 riportate di seguito in questo documento e comunque entro 3
 giorni lavorativi prima della discussione;
-• Non è prevista né accettabile una consegna in ritardo.
++ Non è prevista né accettabile una consegna in ritardo.
